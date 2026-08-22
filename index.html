@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yuki — Ubrania na lata</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="logo" href="#top">Yuki.WS.Vercek<span class="dot">.</span>pl</a>
+    <ul class="nav-links">
+      <li><a href="#shop">Nowości</a></li>
+      <li><a href="#shop">Podstawy</a></li>
+      <li><a href="#shop">Archiwum</a></li>
+      <li><a href="#about">O nas</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="cart-wrap">
+        <button class="cart-btn" id="cart-btn" aria-haspopup="true" aria-expanded="false" aria-controls="cart-panel">KOSZYK <span id="cart-count">0</span></button>
+        <div class="cart-panel" id="cart-panel" role="dialog" aria-label="Koszyk">
+          <div class="cart-panel-head"><span>Twoja torba</span><span id="cart-panel-count">0 produktów</span></div>
+          <div class="cart-items" id="cart-items">
+            <div class="cart-empty" id="cart-empty">Twoja torba jest pusta — zacznij od kurtki polowej.</div>
+          </div>
+          <div class="cart-panel-foot">
+            <div class="cart-subtotal"><span>Suma częściowa</span><span id="cart-subtotal">0 zł</span></div>
+            <button class="cart-checkout" id="cart-checkout" disabled>Do kasy</button>
+          </div>
+        </div>
+      </div>
+      <button class="burger" id="burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-menu-head">
+    <span class="logo">Yuki<span class="dot">.</span>pl</span>
+    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Zamknij menu">✕</button>
+  </div>
+  <ul>
+    <li><a href="#shop" class="mobile-link">Nowości</a></li>
+    <li><a href="#shop" class="mobile-link">Podstawy</a></li>
+    <li><a href="#shop" class="mobile-link">Archiwum</a></li>
+    <li><a href="#about" class="mobile-link">O nas</a></li>
+  </ul>
+</div>
+
+<main id="top">
+
+  <section class="hero">
+    <div>
+      <div class="hero-eyebrow">Kolekcja Jesień — Nr 04</div>
+      <h1>Ubrania<br>warte <em>zatrzymania.</em></h1>
+      <p class="hero-sub">Surowa bawełna, szczotkowany brezent i niefarbowana wełna — sześć elementów uszytych tak, by przetrwały dłużej niż sezon, na który powstały.</p>
+      <a class="hero-cta" href="#shop">Zobacz kolekcję →</a>
+    </div>
+    <div class="hero-swatch">
+      <img class="hero-swatch-img" src="assets/hero-kurtka-polowa.jpg" alt="Kurtka polowa Yuki, brezent w kolorze oliwkowym">
+      <div class="hero-tag"><b>Kurtka polowa</b> Brezent / Oliwkowy / Nr 118</div>
+    </div>
+  </section>
+
+  <div class="strip" role="tablist" aria-label="Filtruj według kategorii">
+    <button class="filter-btn active" data-filter="all">Wszystko</button>
+    <button class="filter-btn" data-filter="topy">Topy</button>
+    <button class="filter-btn" data-filter="spodnie">Spodnie</button>
+    <button class="filter-btn" data-filter="wierzchnie">Okrycia wierzchnie</button>
+    <button class="filter-btn" data-filter="dodatki">Dodatki</button>
+  </div>
+
+  <section class="grid-section" id="shop">
+    <div class="grid" id="product-grid">
+
+      <div class="card" data-cat="topy">
+        <div class="card-swatch">
+          <img class="fabric" src="assets/product-tshirt.jpg" alt="Ciężki T-shirt bawełniany Yuki">
+          <div class="fold-corner"><span>001</span></div>
+        </div>
+        <div class="card-info">
+          <div class="card-name">Ciężki T-shirt bawełniany</div>
+          <div class="card-material">400g / Niefarbowana</div>
+          <div class="card-bottom">
+            <span class="card-price">230 zł</span>
+            <button class="card-add" data-name="Ciężki T-shirt bawełniany" data-price="230" data-image="assets/product-tshirt.jpg">Dodaj</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-cat="spodnie">
+        <div class="card-swatch">
+          <img class="fabric" src="assets/product-spodnie-robocze.jpg" alt="Proste spodnie robocze Yuki">
+          <div class="fold-corner"><span>204</span></div>
+        </div>
+        <div class="card-info">
+          <div class="card-name">Proste spodnie robocze</div>
+          <div class="card-material">Diagonal / Mech</div>
+          <div class="card-bottom">
+            <span class="card-price">520 zł</span>
+            <button class="card-add" data-name="Proste spodnie robocze" data-price="520" data-image="assets/product-spodnie-robocze.jpg">Dodaj</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-cat="wierzchnie">
+        <div class="card-swatch">
+          <img class="fabric" src="assets/product-kurtka-polowa.jpg" alt="Kurtka polowa Yuki">
+          <div class="fold-corner"><span>118</span></div>
+        </div>
+        <div class="card-info">
+          <div class="card-name">Kurtka polowa</div>
+          <div class="card-material">Brezent / Oliwkowy</div>
+          <div class="card-bottom">
+            <span class="card-price">990 zł</span>
+            <button class="card-add" data-name="Kurtka polowa" data-price="990" data-image="assets/product-kurtka-polowa.jpg">Dodaj</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-cat="dodatki">
+        <div class="card-swatch">
+          <img class="fabric" src="assets/product-torba-plotno.jpg" alt="Torba z woskowanego płótna Yuki">
+          <div class="fold-corner"><span>052</span></div>
+        </div>
+        <div class="card-info">
+          <div class="card-name">Torba z woskowanego płótna</div>
+          <div class="card-material">Woskowana bawełna / Piaskowy</div>
+          <div class="card-bottom">
+            <span class="card-price">340 zł</span>
+            <button class="card-add" data-name="Torba z woskowanego płótna" data-price="340" data-image="assets/product-torba-plotno.jpg">Dodaj</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-cat="topy">
+        <div class="card-swatch">
+          <img class="fabric" src="assets/product-koszula-flanelowa.jpg" alt="Luźna koszula flanelowa Yuki">
+          <div class="fold-corner"><span>119</span></div>
+        </div>
+        <div class="card-info">
+          <div class="card-name">Luźna koszula flanelowa</div>
+          <div class="card-material">Czesana bawełna</div>
+          <div class="card-bottom">
+            <span class="card-price">380 zł</span>
+            <button class="card-add" data-name="Luźna koszula flanelowa" data-price="380" data-image="assets/product-koszula-flanelowa.jpg">Dodaj</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-cat="spodnie">
+        <div class="card-swatch">
+          <img class="fabric" src="assets/product-jeansy.jpg" alt="Szerokie jeansy Yuki">
+          <div class="fold-corner"><span>205</span></div>
+        </div>
+        <div class="card-info">
+          <div class="card-name">Szerokie jeansy</div>
+          <div class="card-material">400g Selvedge</div>
+          <div class="card-bottom">
+            <span class="card-price">590 zł</span>
+            <button class="card-add" data-name="Szerokie jeansy" data-price="590" data-image="assets/product-jeansy.jpg">Dodaj</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-cat="wierzchnie">
+        <div class="card-swatch">
+          <img class="fabric" src="assets/product-plaszcz-welniany.jpg" alt="Płaszcz wełniany Yuki">
+          <div class="fold-corner"><span>120</span></div>
+        </div>
+        <div class="card-info">
+          <div class="card-name">Płaszcz wełniany</div>
+          <div class="card-material">Niefarbowana wełna</div>
+          <div class="card-bottom">
+            <span class="card-price">1290 zł</span>
+            <button class="card-add" data-name="Płaszcz wełniany" data-price="1290" data-image="assets/product-plaszcz-welniany.jpg">Dodaj</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-cat="dodatki">
+        <div class="card-swatch">
+          <img class="fabric" src="assets/product-czapka.jpg" alt="Prążkowana czapka Yuki">
+          <div class="fold-corner"><span>053</span></div>
+        </div>
+        <div class="card-info">
+          <div class="card-name">Prążkowana czapka</div>
+          <div class="card-material">Merynos / Kamienny</div>
+          <div class="card-bottom">
+            <span class="card-price">170 zł</span>
+            <button class="card-add" data-name="Prążkowana czapka" data-price="170" data-image="assets/product-czapka.jpg">Dodaj</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="philosophy" id="about">
+    <div class="philosophy-label">Dlaczego robimy to powoli</div>
+    <div>
+      <p>Sześć elementów na sezon. Nic więcej.</p>
+      <p>Współpracujemy z manufakturami, które od dekad pracują na tych samych krosnach, z włókien, które starzeją się lepiej, a nie gorzej. Bez cykli trendów, bez sezonowych kolorów wypełniaczy — tylko ubrania, które chcielibyśmy nosić jeszcze za dziesięć lat.</p>
+    </div>
+  </section>
+
+  <section class="brand-name" id="nazwa">
+    <div class="brand-name-inner">
+      <div class="philosophy-label">Skąd nasza nazwa</div>
+      <p class="brand-name-title">Yuki<span class="dot">.</span>WS<span class="dot">.</span>Vercel</p>
+      <p class="brand-name-intro">Każda część naszej pełnej nazwy coś znaczy.</p>
+      <div class="brand-name-grid">
+        <div class="brand-name-item">
+          <span class="brand-name-code">WS</span>
+          <span class="brand-name-def">Warszawa — miasto, z którego wywodzi się marka.</span>
+        </div>
+        <div class="brand-name-item">
+          <span class="brand-name-code">Vercel</span>
+          <span class="brand-name-def">Versatile — wszechstronny, oraz Accessible — dostępny.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <div class="newsletter-inner">
+      <div>
+        <h3>Bądź pierwszy, gdy pojawi się kolejne sześć elementów.</h3>
+        <div class="newsletter-note">Bez spamu. Jeden e-mail na sezon.</div>
+      </div>
+      <form class="newsletter-form" onsubmit="return false;">
+        <input type="email" placeholder="twojeemail@gmail.com" aria-label="Adres e-mail" required>
+        <button type="submit">Powiadom mnie →</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <a class="logo" href="#top">Yuki.WS.Vercale<span class="dot">.</span>pl</a>
+      <p class="footer-tag">Podstawowe ubrania produkowane w małych partiach z surowych materiałów. Robione, by się znosić, a nie wyrzucić.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Sklep</h4>
+      <ul>
+        <li><a href="#shop">Topy</a></li>
+        <li><a href="#shop">Spodnie</a></li>
+        <li><a href="#shop">Okrycia wierzchnie</a></li>
+        <li><a href="#shop">Dodatki</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Studio</h4>
+      <ul>
+        <li><a href="#about">O nas</a></li>
+        <li><a href="#about">Materiały</a></li>
+        <li><a href="#about">Dziennik</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Pomoc</h4>
+      <ul>
+        <li><a href="#">Rozmiary</a></li>
+        <li><a href="#">Wysyłka</a></li>
+        <li><a href="#">Zwroty</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 YUKI STUDIO</span>
+    <span>PRODUKOWANE W MAŁEJ SKALI</span>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
